@@ -268,9 +268,10 @@ func MyTables(db models.XODB, schema string, relkind string) ([]*models.Table, e
 			}
 		}
 		tables = append(tables, &models.Table{
-			TableName: row.TableName,
-			Type:      row.Type,
-			ManualPk:  manualPk,
+			TableName:    row.TableName,
+			Type:         row.Type,
+			TableComment: row.TableComment,
+			ManualPk:     manualPk,
 		})
 	}
 

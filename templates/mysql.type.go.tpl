@@ -3,6 +3,7 @@
 {{- if .Comment -}}
 // {{ .Comment }}
 {{- else -}}
+// {{ .Table.TableComment }}
 // {{ .Name }} represents a row from '{{ $table }}'.
 {{- end }}
 type {{ .Name }} struct {
